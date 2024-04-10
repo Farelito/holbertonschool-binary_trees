@@ -1,9 +1,9 @@
 #include "binary_trees.h"
 
 /**
- * binary_tree_is_perfect - checks if a binary tree is perfect
- * @tree: pointer to the root node of the tree to check
- * Return: 1 if is perfect tree 0 if not
+ * binary_tree_uncle - Finds the uncle of a node in a binary tree.
+ * @node: A pointer to the node for which to find the uncle.
+ * Return: A pointer to the uncle node, or NULL if no uncle exists.
  */
 binary_tree_t *binary_tree_uncle(binary_tree_t *node)
 {
