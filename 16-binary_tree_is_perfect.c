@@ -7,23 +7,23 @@
  */
 int binary_tree_is_perfect(const binary_tree_t *tree)
 {
-    int h_L, h_R;
-    int bnr_L, bnr_R;
+	int h_L, h_R;
+	int bnr_L, bnr_R;
 
-    if (tree == NULL)
+	if (tree == NULL)
 		return (0);
 
-    h_L = binary_tree_height(tree->left);
-    h_R = binary_tree_height(tree->right);
+	h_L = binary_tree_height(tree->left);
+	h_R = binary_tree_height(tree->right);
 
 	if (h_L != h_R)
-	    return (0);
+		return (0);
 
 	if (tree->left == NULL && tree->right == NULL)
 		return (1);
 
-    bnr_L = binary_tree_is_perfect(tree->left);
-    bnr_R = binary_tree_is_perfect(tree->right);
+	bnr_L = binary_tree_is_perfect(tree->left);
+	bnr_R = binary_tree_is_perfect(tree->right);
 
 	return (bnr_L && bnr_R);
 }
